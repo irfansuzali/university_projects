@@ -7,11 +7,11 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('school_name','year_in_school','enrollment_year','graduation_year')
+        fields = ('username','first_name','last_name', 'email', 'school_name','year_in_school','enrollment_year','graduation_year')
 
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta(UserChangeForm.Meta):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('school_name','year_in_school','enrollment_year','graduation_year')
+        fields = ('username','first_name','last_name', 'email', 'school_name','year_in_school','enrollment_year','graduation_year')
         

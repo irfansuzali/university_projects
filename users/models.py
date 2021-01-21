@@ -4,12 +4,11 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class CustomUser(AbstractUser):
-    #Full Name
-    first_name = models.CharField(max_length = 30)
-    last_name = models.CharField(max_length = 30)
 
     #School Name 
-    school_name = models.CharField(max_length = 500)
+    school_name = models.CharField(
+        max_length = 500,
+        null = True,)
 
     #Enrollment/Graduation Year
     YEARS = []
