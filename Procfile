@@ -1,1 +1,1 @@
-web: gunicorn uni_freelance_project.wsgi --log-file--
+web: gunicorn uni_freelance_project.wsgi --log-file -
