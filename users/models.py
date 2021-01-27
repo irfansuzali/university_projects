@@ -5,14 +5,11 @@ from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
 
-    #School Name 
-    school_name = models.CharField(
-        max_length = 500,
-        null = True,)
+    school = models.CharField(max_length = 255)
 
     #Enrollment/Graduation Year
     YEARS = []
-    for i in range(0,30,1):
+    for i in range(-10,10,1):
         YEARS.append((2020-i,2020-i))
     
     enrollment_year = models.PositiveSmallIntegerField(
@@ -27,16 +24,26 @@ class CustomUser(AbstractUser):
 
     #Current Standing
     YEAR_IN_SCHOOL_CHOICES = [
+        ('--SELECT--','--SELECT--'),
         ('FR', 'Freshman'),
         ('SO', 'Sophomore'),
         ('JR', 'Junior'),
         ('SR', 'Senior'),
         ('GR', 'Graduate'),
     ]
+
     year_in_school = models.CharField(
-        max_length=2,
+        max_length=255,
         choices=YEAR_IN_SCHOOL_CHOICES,
-        default='FR',
+        default='',
     )
 
+class School(models.Model):
+    name = models.CharField(max_length = 255, unique = True)
+
+    class Meta:
+        verbose_name_plural = "schools"
+
+    def __str__(self):
+        return self.name
     

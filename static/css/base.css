@@ -1,0 +1,10 @@
+/* base.html */
+.main-content-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* signup.html */
+.signup-form {
+    text-align: left;
+}

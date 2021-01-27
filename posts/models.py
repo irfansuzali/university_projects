@@ -7,6 +7,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 255)
     body = models.TextField()
     date = models.DateTimeField(auto_now_add = True)
+    category = models.CharField(max_length = 255)
     author = models.ForeignKey(
         get_user_model(),
         on_delete = models.CASCADE
@@ -17,3 +18,14 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args = [str(self.id)])
+
+class Category(models.Model):
+    name = models.CharField(max_length = 255)
+
+    class Meta:
+        verbose_name_plural = "categories"
+
+    def __str__(self):
+        return self.name
+        
+
