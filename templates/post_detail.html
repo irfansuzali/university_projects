@@ -10,6 +10,13 @@
   {% if post.author.pk == request.user.pk %}
     <p><a href="{% url 'post_edit' post.pk %}">Edit</a> | <a href="{% url 'post_delete' post.pk %}">Delete</a></p>
   {% endif %}
-
   <p>Back to <a href="{% url 'post_list' %}">Job Postings</a></p>
+
+  <h3> Comments </h3>
+  {% for comment in post.comments.all %}
+    <p>
+      <span class = "font-weight-bold"> {{ comment.author}} &middot;</span>
+      {{comment}}
+    </p>
+  {% endfor %}
 {% endblock content %}

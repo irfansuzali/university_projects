@@ -1,17 +1,17 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import UpdateView, DeleteView, CreateView
-from .models import Post
+from .models import Post, Comment
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import CreatePostForm
+from .forms import CreatePostForm, CreateCommentForm
 
 class PostListView(ListView):
     model = Post
     template_name = 'post_list.html'
     login_url = 'login'
 
-class PostDetailView(LoginRequiredMixin, DetailView):
+class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
     login_url = 'login'
@@ -34,6 +34,16 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_new.html'
     form_class = CreatePostForm
+    login_url = 'login'
+
+    def form_valid(self,form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+class CommentCreateView(LoginRequiredMixin, CreateView):
+    model = Comment
+    template_name = 'comment_new.html'
+    form_class = CreateCommentForm
     login_url = 'login'
 
     def form_valid(self,form):
