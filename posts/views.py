@@ -48,6 +48,7 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self,form):
         form.instance.author = self.request.user
+        form.instance.post_id = self.kwargs.get('pk')
         return super().form_valid(form)
 
 def CategoryListView(request, category):

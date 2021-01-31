@@ -15,8 +15,9 @@
   <h3> Comments </h3>
   {% for comment in post.comments.all %}
     <p>
-      <span class = "font-weight-bold"> {{ comment.author}} &middot;</span>
+      <span class = "font-weight-bold"> {{ comment.author}} | </span>
       {{comment}}
     </p>
   {% endfor %}
+  <!-- <p><a href="{% url 'comment_new' post.pk%}">Create New Comment</a></p> -->
 {% endblock content %}
