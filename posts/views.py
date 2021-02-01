@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from .models import Post, Comment
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CreatePostForm, CreateCommentForm
 
@@ -48,8 +48,11 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self,form):
         form.instance.author = self.request.user
-        form.instance.post_id = self.kwargs.get('pk')
+        form.instance.post_id = self.kwargs.get('post_pk')
         return super().form_valid(form)
+    
+    def get_success_url(self):
+        return reverse('post_detail', args=(self.kwargs.get("post_pk"),))
 
 def CategoryListView(request, category):
     category = category.capitalize()
