@@ -3,62 +3,66 @@
 {% block title %} Home {%endblock title%}
 
 {% block content %}
-<div class="jumbotron ">
-    <h1 class="display-4">University Projects</h1>
-    <p class="lead text-center"> University is a place to foster creative ideas and explore unique pathways. With
-        Covid-19 affecting the way we interact with one another in our everyday lives, it is more important than ever to
-        work on building back those connections.</p>
-    <p class="lead text-center"> Univeristy Projects is a website to connect students with like-minded individuals to
-        work on projects that inspire them.</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="{% url 'post_list' %}" role="button"> View All Job Postings</a>
-    </p>
+<div class = "container">
+    <div class="jumbotron ">
+        <h1 class="display-4">University Projects</h1>
+        <p class="lead text-center"> University is a place to foster creative ideas and explore unique pathways. With
+            Covid-19 affecting the way we interact with one another in our everyday lives, it is more important than ever to
+            work on building back those connections.</p>
+        <p class="lead text-center"> Univeristy Projects is a website to connect students with like-minded individuals to
+            work on projects that inspire them.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'post_list' %}" role="button"> View All Job Postings</a>
+        </p>
+    </div>
 </div>
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start footer ">
-    <!-- Grid container -->
-    <div class="container p-4">
-        <!--Grid row-->
-        <div class="row">
-            <!--Grid column-->
-            <div class="col-lg-9 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Explore More</h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                    voluptatem veniam, est atque cumque eum delectus sint!
-                </p>
-            </div>
-            <!--Grid column-->
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start footer">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-9 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Explore More</h5>
+                    <p>
+                        You may paint with broad strokes, while I choose to use stylized binary values. A series of 1s and 0s to breathe life into ideas that live inside my head. Programming has become a creative outlet for me to express my ideas.
+                    </p>
+                    <p>
+                        Feel free to explore my work and leave feedback. Explore my additional work through the links provided. 
+                    </p>
 
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
-
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a href="#!" class="text-dark">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="text-dark">Github</a>
-                    </li>
-                </ul>
+                </div>
+                <!--Grid column-->
+    
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+    
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="https://irfansuzali.github.io/portfolio/" class="text-dark">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/irfan-suzali/" class="text-dark">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="www.github.com/irfansuzali" class="text-dark">Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
             </div>
-            <!--Grid column-->
+            <!--Grid row-->
         </div>
-        <!--Grid row-->
-    </div>
-    <!-- Grid container -->
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright: Irfan Suzali
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
 {% endblock content%}

@@ -4,6 +4,7 @@
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
+<div class = "container align-left">
   <h1>Project Postings</h1>
   <h3>{{category}}</h3>
   {% for post in category_posts %}
@@ -32,4 +33,5 @@
     </div>
     <br />
   {% endfor %}
+</div>
 {% endblock content %}

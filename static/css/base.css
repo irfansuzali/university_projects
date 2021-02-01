@@ -1,10 +1,22 @@
 /* base.html */
 .main-content-container {
+    margin: 0;
     margin-top: 2rem;
     text-align: center;
 }
 
 /* signup.html */
 .signup-form {
+    text-align: left;
+}
+
+.footer {
+    margin-top: 225px;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.align-left {
     text-align: left;
 }

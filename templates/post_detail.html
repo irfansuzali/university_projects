@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class = "container align-left">
   <div class="article-entry">
     <h2>{{ object.title }}</h2>
     <p>by {{ object.author }} | {{ object.date }}</p>
@@ -20,4 +21,5 @@
     </p>
   {% endfor %}
   <p><a href="{% url 'comment_new' post.pk%}">Create New Comment</a></p>
+</div>
 {% endblock content %}
