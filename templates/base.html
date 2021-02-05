@@ -54,6 +54,9 @@
               {% endfor%}
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'schema-redoc'%}">API Documentation</a>
+          </li>
         </ul>
         {% if user.is_authenticated %}
         <ul class="navbar-nav ml-auto">

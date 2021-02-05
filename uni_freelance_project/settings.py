@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     #3RD PARTY
     'crispy_forms',
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

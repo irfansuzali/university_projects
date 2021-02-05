@@ -9,6 +9,9 @@ django-crispy-forms = "*"
 gunicorn = "*"
 whitenoise = "*"
 djangorestframework = "*"
+pyyaml = "*"
+uritemplate = "*"
+drf-yasg = "*"
 
 [dev-packages]
 

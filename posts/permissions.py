@@ -6,4 +6,5 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
         #If the request method is one of the HTTTP SAFE_METHODS (GET, OPTIONS, HEAD), read only permission granted
         if request.method in permissions.SAFE_METHODS:
             return True
+            
         return obj.author == request.user
